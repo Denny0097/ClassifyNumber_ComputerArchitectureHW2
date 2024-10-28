@@ -17,9 +17,9 @@ changeMax:                  # change max value
     mv      t2, t3          
     mv      a0, t1          # a0 record max value's index
     
+next_loop:
     addi    t0, t0, 4
     addi    t1, t1, 1
-next_loop:
     blt     t1, a1, loop_for_findMax
 
     lw      ra, 0(sp)

@@ -1,6 +1,6 @@
     .text
-    .globl dot
-dot:
+    .globl matmul
+matmul:
 # matrixs addr- a0: m0, a3: m1, a6: output
     addi    sp, sp, -28
     sw      ra, 0(sp)
@@ -69,10 +69,10 @@ end_outer:
 
 
 error_m0:
-    li      a0, 2 
+    li      a1, 4 
     ecall
 error_m1:
-    li      a0, 3
+    li      a1, 4
     ecall
 error_not_match:
     li      a0, 4
